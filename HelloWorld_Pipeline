@@ -12,5 +12,10 @@ pipeline {
                 echo 'Fun for everyone'
             }
         }
+        stage('Run unit tests') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
     }
 }
